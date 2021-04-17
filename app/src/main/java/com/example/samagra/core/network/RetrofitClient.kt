@@ -6,7 +6,7 @@ import okhttp3.OkHttpClient
 import okhttp3.logging.HttpLoggingInterceptor
 import retrofit2.Retrofit
 import retrofit2.converter.moshi.MoshiConverterFactory
-import java.util.concurrent.TimeUnit.SECONDS
+import java.util.concurrent.TimeUnit
 
 object RetrofitClient {
 
@@ -30,8 +30,8 @@ object RetrofitClient {
       val mapAdapter = moshi.adapter<Map<String, String>>(type)
       adapters.add(mapAdapter)
       val client = OkHttpClient.Builder()
-          .connectTimeout(CONNECT_TIMEOUT, SECONDS)
-          .readTimeout(READ_TIMEOUT, SECONDS)
+          .connectTimeout(CONNECT_TIMEOUT, TimeUnit.SECONDS)
+          .readTimeout(READ_TIMEOUT, TimeUnit.SECONDS)
           .addInterceptor(loggingInterceptor)
           .build()
 

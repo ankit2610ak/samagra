@@ -1,6 +1,6 @@
 package com.example.samagra.core.network.feature
 
-import com.example.apps10x.core.network.apiV1networkRequest
+import com.example.samagra.core.network.apiV1networkRequest
 import com.example.samagra.core.network.ApiResponse
 import com.example.samagra.core.network.apiResponses.CommentsResponse
 import com.example.samagra.core.network.apiResponses.PhotosResponse
