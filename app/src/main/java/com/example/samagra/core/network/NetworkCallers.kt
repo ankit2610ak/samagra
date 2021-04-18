@@ -1,8 +1,5 @@
-package com.example.apps10x.core.network
+package com.example.samagra.core.network
 
-import com.example.samagra.core.network.Api
-import com.example.samagra.core.network.ApiClient
-import com.example.samagra.core.network.ApiResponse
 import retrofit2.Call
 import retrofit2.Callback
 
@@ -43,5 +40,5 @@ private fun <R, T> makeApiCall(
 
 
 fun getBaseUrl(): String {
-  return "https://jsonplaceholder.typicode.com"
+  return "https://jsonplaceholder.typicode.com/"
 }

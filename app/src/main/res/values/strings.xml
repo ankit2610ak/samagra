@@ -1,4 +1,11 @@
 <resources>
     <string name="app_name">SAMAGRA</string>
     <string name="retry">Retry</string>
+    <string name="samagra">SAMAGRA</string>
+    <string name="start">Start:</string>
+    <string name="end">End:</string>
+    <string name="comments">Comments</string>
+    <string name="photos">Photos</string>
+    <string name="todos">Todos</string>
+    <string name="posts">Posts</string>
 </resources>
