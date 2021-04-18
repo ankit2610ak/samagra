@@ -21,6 +21,7 @@ class MainViewModel(val mainPageContract: MainPageContract) : BaseViewModel() {
     val todosLiveData = MutableLiveData<TodosNavigation>()
     val postsLiveData = MutableLiveData<PostsNavigation>()
     val errorToastLiveData = MutableLiveData<String>()
+    val timerStatusLiveData = MutableLiveData<String>()
 
     override fun onViewCreated() {
         val t : Thread = Thread {
@@ -29,6 +30,7 @@ class MainViewModel(val mainPageContract: MainPageContract) : BaseViewModel() {
         t.start()
         t.join()
         Log.d("MainViewModel", "5 seconds completed")
+        timerStatusLiveData.postValue("5 seconds completed")
         callApis()
 
     }
