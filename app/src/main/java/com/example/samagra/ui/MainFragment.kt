@@ -29,12 +29,12 @@ class MainFragment : BaseFragment() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         viewModel = ViewModelProviders.of(this, MainViewModelFactory()).get(MainViewModel::class.java)
-        viewModel.onViewCreated()
     }
 
     @SuppressLint("SetTextI18n")
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+        viewModel.onViewCreated()
 
         comments_btn.setOnClickListener {
             viewModel.getComments()
@@ -48,7 +48,9 @@ class MainFragment : BaseFragment() {
         posts_btn.setOnClickListener {
             viewModel.getPosts()
         }
-
+        viewModel.timerStatusLiveData.observe(this, {
+            Toast.makeText(baseActivity, it, Toast.LENGTH_SHORT).show()
+        })
         viewModel.errorToastLiveData.observe(this, {
             Toast.makeText(baseActivity, it, Toast.LENGTH_SHORT).show()
         })
